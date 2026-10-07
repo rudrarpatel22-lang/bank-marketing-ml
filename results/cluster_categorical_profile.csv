@@ -1,0 +1,3 @@
+cluster,job,marital,education,housing,loan,contact,poutcome
+0,admin.,married,university.degree,yes,no,cellular,nonexistent
+1,blue-collar,married,university.degree,yes,no,cellular,failure
