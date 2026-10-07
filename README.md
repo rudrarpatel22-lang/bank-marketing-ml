@@ -63,21 +63,6 @@ bank-marketing-ml/
 │   ├── 02_supervised_learning_bank_marketing.ipynb
 │   └── 03_clustering.ipynb
 ├── results/
+│   └── README.md
 └── reports/
-
-
-## Dataset
-
-The project uses the UCI Bank Marketing dataset.
-
-The raw dataset is not included in this repository.
-
-See `data/README.md` for instructions on obtaining the dataset.
-
-## Setup
-
-Install the required Python packages:
-
-```bash
-pip install -r requirements.txt
-
+    └── README.md
