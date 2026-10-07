@@ -1,40 +1,66 @@
 # Bank Marketing ML Project
 
-## DJS Compute ML Superset
+## Overview
 
-This project uses the UCI Bank Marketing dataset to investigate two connected machine learning tasks:
+This project analyzes the UCI Bank Marketing dataset using supervised learning and unsupervised clustering.
 
-1. Predict which customers are more likely to subscribe to a term deposit and rank them for a 500-customer campaign budget.
-2. Explore whether meaningful customer/contact groups can be identified through unsupervised learning.
+The project consists of two main tasks:
 
-## Dataset
+- **Task 1:** Supervised learning and customer ranking
+- **Task 2:** Customer segmentation using clustering
 
-The project uses the full `bank-additional-full.csv` dataset containing 41,188 historical contact records and 20 input features.
+## Task 1 — Supervised Learning
 
-## Project Tasks
+The objective is to predict the probability that a customer will subscribe to a term deposit and rank customers so that the bank can prioritize its limited contact capacity.
 
-### Task 1 — Supervised Learning
+The analysis includes:
+
 - Exploratory Data Analysis
-- Feature availability audit
-- Temporal train/validation/final holdout design
-- Preprocessing
-- Baseline and classification models
-- Class imbalance analysis
-- Model evaluation
-- Top-500 ranking analysis
+- Data preprocessing
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- LDA
+- QDA
+- Class-imbalance analysis
+- Time-aware train/holdout evaluation
+- Precision@500
+- Lift@500
+- Error analysis
 
-### Task 2 — Unsupervised Learning
-- Feature selection for clustering
-- Customer/contact segmentation
-- Clustering comparison
-- Cluster evaluation and profiling
+The `duration` feature is excluded because it is only known after the current call and would introduce leakage.
+
+## Task 2 — Clustering
+
+The objective is to identify groups of similar pre-call customer-contact records.
+
+The analysis includes:
+
+- Pre-call feature selection
+- Numerical scaling
+- One-hot encoding
+- K-Means clustering
+- Agglomerative Clustering
+- Silhouette analysis
+- Clustering stability using ARI
+- Cluster profiling
 - PCA visualization
-- Connection of segmentation results to the campaign objective
+- Holdout cluster evaluation
+
+The target variable `y` and supervised model predictions are not used to create the clusters.
 
 ## Repository Structure
 
-The repository will contain notebooks, results, reports, and supporting project files as the analysis progresses.
-
-## Status
-
-Project in progress.
+```text
+bank-marketing-ml/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── data/
+│   └── README.md
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_supervised_learning.ipynb
+│   └── 03_clustering.ipynb
+├── results/
+└── reports/
