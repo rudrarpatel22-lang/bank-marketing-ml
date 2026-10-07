@@ -59,8 +59,8 @@ bank-marketing-ml/
 ├── data/
 │   └── README.md
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_supervised_learning.ipynb
+│   ├── 01_eda_bank_marketing.ipynb
+│   ├── 02_supervised_learning_bank_marketing.ipynb
 │   └── 03_clustering.ipynb
 ├── results/
 └── reports/
